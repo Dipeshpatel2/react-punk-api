@@ -1,11 +1,12 @@
 import React from 'react'
-import SearchBox from '../SearchBeer/SearchBeer'
+import SearchBox from '../SearchBox/SearchBox'
 
 
-const SearchBeer = () => {
+const SearchBeer = (props) => {
+  const {handleSearch} = props
   return (
     <div className='searchbeer'>
-      <SearchBox />
+      <SearchBox handleSearch = {handleSearch} />
     </div>
   )
 }

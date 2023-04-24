@@ -1,9 +1,9 @@
 import React from 'react'
 import BeerCard from '../BeerCard/BeerCard'
 import "./Main.scss"
-import beers from '../../assets/data/beers'
 
-const Main = () => {
+const Main = (props) => {
+  const {beers} = props
     return (
       <div className="main">
         {beers.map(beer => (

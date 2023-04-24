@@ -4,12 +4,16 @@ import BrewdogMainLogo from "../../assets/images/brewdog-mainlogo.jpeg"
 import SearchBeer from '../SearchBeer/SearchBeer'
 import BeerCard from '../BeerCard/BeerCard'
 
-const SideNav = () => {
+const SideNav = (props) => {
+  const {handleSearch} = props
+
+  
+
   return (
     <div className='sidenav'>
       <img className='sidenav__image' src={BrewdogMainLogo} alt="Brewdog-Mainlogo" />
-      <SearchBeer />
-      <BeerCard />
+      <SearchBeer handleSearch = {handleSearch} />
+      
     </div>
   )
 }

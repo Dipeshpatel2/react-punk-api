@@ -1,4 +1,4 @@
-const beers = [
+const beerData = [
     {
         "id": 1,
         "name": "Buzz",
@@ -351,4 +351,4 @@ const beers = [
     }
 ]
 
-export default beers
+export default beerData
