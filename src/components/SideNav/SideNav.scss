@@ -1,0 +1,20 @@
+.sidenav {
+    width: 100%;
+    padding: 10px;
+    background-color: lightgray;
+    border: 2px solid grey;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-wrap: wrap;
+
+    &__image {
+    width: auto;
+    height: 115px;
+    object-fit: cover;
+    margin-bottom: 10px;
+    border: 2px solid black;
+    box-shadow: 0 5px 10px black; 
+  }
+  
+}

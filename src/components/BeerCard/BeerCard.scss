@@ -1,0 +1,44 @@
+.beercard {
+  height: 375px;
+  width: 250px;
+  border: 1px solid black;
+  margin: 15px;
+  padding: 0px 10px;
+  background-color: pink;
+  border-radius: 10px;
+  font-size: 13px;
+  box-shadow: 0 5px 10px black;
+  text-align: center;
+
+  &__description{
+      font-size: 11px;
+      overflow-y: scroll;
+      height:40px;
+  }
+
+  &__image {
+    height: 150px;
+  }
+
+  h1 {
+    font-size: 24px;
+    font-weight: bold;
+    height: 48px;
+  }
+
+  h2 {
+    font-size: 14px;
+    color: #333;
+  }
+}
+
+/* Styling the scrollbar */
+::-webkit-scrollbar {
+  width: 10px; /* Set width of the scrollbar */
+}
+
+/* Styling the scrollbar thumb */
+::-webkit-scrollbar-thumb {
+  background-color: black; /* Set color of the thumb */
+  border-radius: 5px; /* Set border radius of the thumb */
+}
