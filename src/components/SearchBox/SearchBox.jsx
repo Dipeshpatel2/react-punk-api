@@ -3,9 +3,7 @@ import "../SearchBox/SearchBox.scss"
 
 const SearchBox = (props) => {
   const {handleSearch} = props
-  // const { label, searchTerm, handleInput} = props
 
-  // const capitalizedLabel = label[0].toUpperCase() + label.slice(1)
   return (
     <form className='searchbox'>
         <label htmlFor="input">Search Beer</label>
