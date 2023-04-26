@@ -22,15 +22,3 @@ const Main = ({beers}) => {
   
   export default Main;
   
-// const Main = () => {
-//     const exampleBeer = beers[0]
-//   return (
-//     <div>
-//         <BeerCard name = {exampleBeer.name} tagline = {exampleBeer.tagline} description ={exampleBeer.description} image = {exampleBeer.image_url}
-//          abv = {exampleBeer.abv} ph = {exampleBeer.ph}/>
-        
-//     </div>
-//   )
-// }
-
-// export default Main
