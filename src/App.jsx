@@ -5,7 +5,7 @@ import Main from "./components/Main/Main";
 import beerData from "./assets/data/beers";
 
 const App = () => {
-  const [beers, setBeers] = useState();
+  const [beers, setBeers] = useState([]);
 
   const [beerInfo, setBeerInfo] = useState();
   const [classicRange, setClassicRange] = useState(false);
@@ -21,7 +21,7 @@ const App = () => {
 
   useEffect(() => {
     getBeers();
-  }, []);
+  },[]);
 
   const handleSearch = (event) => {
     console.log(event.target.value);
