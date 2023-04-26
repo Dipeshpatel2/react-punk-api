@@ -2,8 +2,7 @@ import React from 'react'
 import BeerCard from '../BeerCard/BeerCard'
 import "./Main.scss"
 
-const Main = (props) => {
-  const {beers} = props
+const Main = ({beers}) => {
     return (
       <div className="main">
         {beers.map(beer => (

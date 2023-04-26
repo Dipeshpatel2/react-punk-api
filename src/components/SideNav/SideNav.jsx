@@ -3,15 +3,12 @@ import "./SideNav.scss";
 import BrewdogMainLogo from "../../assets/images/brewdog-mainlogo.jpeg";
 import SearchBeer from "../SearchBeer/SearchBeer";
 
-const SideNav = (props) => {
-  const {
-    handleSearch,
-    handleHighAlcoholFilterChange,
-    handleClassicRangeFilterChange,
-    handleHighAcidityFilterChange,
-    filters
-  } = props;
-
+const SideNav = ({handleSearch, 
+  handleHighAlcoholFilterChange, 
+  handleClassicRangeFilterChange, 
+  handleHighAcidityFilterChange, 
+  filters}) => {
+ 
   return (
     <div className="sidenav">
       <img className="sidenav__image" src={BrewdogMainLogo} alt="Brewdog-Mainlogo" />

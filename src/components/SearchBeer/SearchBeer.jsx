@@ -2,8 +2,7 @@ import React from 'react'
 import SearchBox from '../SearchBox/SearchBox'
 
 
-const SearchBeer = (props) => {
-  const {handleSearch} = props
+const SearchBeer = ({handleSearch}) => {
   return (
     <div className='searchbeer'>
       <SearchBox handleSearch = {handleSearch} />

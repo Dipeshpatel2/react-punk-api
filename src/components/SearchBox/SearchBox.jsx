@@ -1,8 +1,7 @@
 import React from 'react'
 import "../SearchBox/SearchBox.scss"
 
-const SearchBox = (props) => {
-  const {handleSearch} = props
+const SearchBox = ({handleSearch}) => {
 
   return (
     <form className='searchbox'>

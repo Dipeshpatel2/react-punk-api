@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./App.scss";
 import SideNav from "./components/SideNav/SideNav";
 import Main from "./components/Main/Main";
@@ -11,10 +11,20 @@ const App = () => {
     classicRange: false,
     highAcidity: false,
   });
+  const [beerInfo, setBeerInfo] = useState()
+
+  const getBeers = async () => {
+    const url = "https://api.punkapi.com/v2/beers"
+    const response = await fetch(url)
+    const data = await response.json()
+    setBeerInfo(data)
+  }
+useEffect(() => {
+  getBeers()
+}, [])     
+
 
   const handleSearch = (event) => {
-    console.log(event.target.value);
-    // Update the state with the filtered beers based on search query
     const filteredBeers = beerData.filter((beer) =>
       beer.name.toLowerCase().includes(event.target.value.toLowerCase())
     );
@@ -45,7 +55,6 @@ const App = () => {
 
     // Classic Range Filter
     const filteredBeers = beerData.filter((beer) => {
-      // Extract the year from the first_brewed date string
       const year = parseInt(beer.first_brewed.split("/")[1]);
       return checked ? year < 2010 : true;
     });
