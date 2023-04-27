@@ -3,6 +3,7 @@ import BeerCard from '../BeerCard/BeerCard'
 import "./Main.scss"
 
 const Main = ({beers}) => {
+  console.log(beers)
     return (
       <div className="main">
         {beers.map(beer => (

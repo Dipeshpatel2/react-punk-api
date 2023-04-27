@@ -2,12 +2,12 @@ import React, { useState, useEffect } from "react";
 import "./App.scss";
 import SideNav from "./components/SideNav/SideNav";
 import Main from "./components/Main/Main";
-import beerData from "./assets/data/beers";
+//import beerData from "./assets/data/beers";
 
 const App = () => {
-  const [beers, setBeers] = useState([]);
+  
 
-  const [beerInfo, setBeerInfo] = useState();
+  const [beerInfo, setBeerInfo] = useState([]);
   const [classicRange, setClassicRange] = useState(false);
   const [highABV, setHighABV] = useState(false);
   const [highAcidity, setHighAcidity] = useState(false);
@@ -16,20 +16,22 @@ const App = () => {
     const url = "https://api.punkapi.com/v2/beers";
     const response = await fetch(url);
     const data = await response.json();
+    console.log(data)
     setBeerInfo(data);
   };
 
   useEffect(() => {
+    console.log("inside this is running")
     getBeers();
   },[]);
 
   const handleSearch = (event) => {
     console.log(event.target.value);
     // Update the state with the filtered beers based on search query
-    const filteredBeers = beerData.filter((beer) =>
+    const filteredBeers = beerInfo.filter((beer) =>
       beer.name.toLowerCase().includes(event.target.value.toLowerCase())
     );
-    setBeers(filteredBeers);
+    setBeerInfo(filteredBeers);
   };
 
   const handleCheckBoxHighABV = (event) => {
@@ -37,7 +39,7 @@ const App = () => {
     setHighABV(event.target.checked);
   
     // Filter the beers based on the checked value
-    const filteredBeers = beerData.filter((beer) => {
+    const filteredBeers = beerInfo.filter((beer) => {
       if (event.target.checked) {
         // If checked, only return beers with high ABV
         return beer.abv > 6;
@@ -48,7 +50,7 @@ const App = () => {
     });
   
     // Update the beers state with the filtered beers
-    setBeers(filteredBeers);
+    setBeerInfo(filteredBeers);
   };
   
   const handleCheckBoxHighAcidity = (event) => {
@@ -56,7 +58,7 @@ const App = () => {
     setHighAcidity(event.target.checked);
   
     // Filter the beers based on the checked value
-    const filteredBeers = beerData.filter((beer) => {
+    const filteredBeers = beerInfo.filter((beer) => {
       if (event.target.checked) {
         // If checked, only return beers with high acidity
         return beer.ph < 4  && beer.ph;
@@ -67,7 +69,7 @@ const App = () => {
     });
   
     // Update the beers state with the filtered beers
-    setBeers(filteredBeers);
+    setBeerInfo(filteredBeers);
   };
   
   const handleCheckBoxClassicRange = (event) => {
@@ -75,7 +77,7 @@ const App = () => {
     setClassicRange(event.target.checked);
   
     // Filter the beers based on the checked value
-    const filteredBeers = beerData.filter((beer) => {
+    const filteredBeers = beerInfo.filter((beer) => {
       if (event.target.checked) {
         // If checked, only return beers in classic range
         return beer.first_brewed.includes("2010");
@@ -86,7 +88,7 @@ const App = () => {
     });
   
     // Update the beers state with the filtered beers
-    setBeers(filteredBeers);
+    setBeerInfo(filteredBeers);
   };
   
 
@@ -98,13 +100,13 @@ const App = () => {
         handleCheckBoxClassicRange={handleCheckBoxClassicRange}
         handleCheckBoxHighAcidity={handleCheckBoxHighAcidity}
       />
-      <Main beers={beers} />
+      <Main beers={beerInfo} />
     </div>
   );
 };
 
 export default App;
-
+//===================================
 
 // import React, { useState, useEffect } from "react";
 // import "./App.scss";
