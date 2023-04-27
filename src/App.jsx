@@ -23,12 +23,23 @@ const App = () => {
   }, []);
 
   const handleSearch = (event) => {
-    console.log(event.target.value);
-    const filteredBeers = beerInfo.filter((beer) =>
-      beer.name.toLowerCase().includes(event.target.value.toLowerCase())
-    );
-    setBeerInfo(filteredBeers);
+    if (event.target.value) {
+      console.log(event.target.value);
+      const filteredBeers = beerInfo.filter((beer) =>
+        beer.name.toLowerCase().includes(event.target.value.toLowerCase())
+      );
+      setBeerInfo(filteredBeers);
+    } else{
+      setBeerInfo(storeBeer);
+    }
   };
+  // const handleSearch = (event) => {
+  //   console.log(event.target.value);
+  //   const filteredBeers = beerInfo.filter((beer) =>
+  //     beer.name.toLowerCase().includes(event.target.value.toLowerCase())
+  //   );
+  //   setBeerInfo(filteredBeers);
+  // };
 
   const filterBeers = (event) => {
   console.log(event);
