@@ -1,12 +1,13 @@
 .sidenav {
     width: 100%;
+    height: 100%;
     padding: 10px;
     background-color: lightgray;
     border: 2px solid grey;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    flex-wrap: wrap;
+
 
     &__image {
     width: auto;
@@ -14,7 +15,20 @@
     object-fit: cover;
     margin-bottom: 10px;
     border: 2px solid black;
-    box-shadow: 0 5px 10px black; 
+    box-shadow: 0 5px 10px black;
   }
-  
+
+  label {
+    margin-right: 10px;
+    padding-left: 5px;
+  }
+  input[type="checkbox"] {
+    margin-right: 5px;
+    width: 20px;
+    height: 20px;
+    border: 2px solid black;
+    border-radius: 3px;
+    background-color: white;
+    cursor: pointer;
+  }
 }

@@ -1,0 +1,33 @@
+.App {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  
+  @media (min-width: 768px) {
+    .App {
+      flex-direction: row;
+    }
+  }
+  
+  .Main {
+    flex: 1;
+    overflow: scroll;
+  }
+  
+  .SideNav {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    width: 100%;
+    max-width: 300px;
+    background-color: #f2f2f2;
+  }
+  
+  @media (min-width: 768px) {
+    .SideNav {
+      width: auto;
+      max-width: none;
+    }
+  }
+  
