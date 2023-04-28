@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/react-punk-api/static/css/main.81433c93.css",
+    "main.js": "/react-punk-api/static/js/main.a89c62e9.js",
+    "static/js/787.10a70a3b.chunk.js": "/react-punk-api/static/js/787.10a70a3b.chunk.js",
+    "static/media/brewdog-mainlogo.jpeg": "/react-punk-api/static/media/brewdog-mainlogo.d7a94c52f11e99d3b129.jpeg",
+    "index.html": "/react-punk-api/index.html",
+    "main.81433c93.css.map": "/react-punk-api/static/css/main.81433c93.css.map",
+    "main.a89c62e9.js.map": "/react-punk-api/static/js/main.a89c62e9.js.map",
+    "787.10a70a3b.chunk.js.map": "/react-punk-api/static/js/787.10a70a3b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.81433c93.css",
+    "static/js/main.a89c62e9.js"
+  ]
+}
